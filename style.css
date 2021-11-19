@@ -1,0 +1,9 @@
+h1, h2 {
+  font-family: Lato;
+}
+
+#cy {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
