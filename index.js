@@ -80,7 +80,49 @@ var cy = cytoscape({
         { data: { id: 'i',
         heading:'Account 02',
         user:'bob',
-        attribute:'access project' } }
+        attribute:'access project' },
+        } ,
+        { data: { id: 'j',
+        heading:'Network 05',
+        user:'bob',
+        attribute:'access project' },
+        } ,
+        { data: { id: '06',
+        heading:'Network',
+        user:'bob',
+        attribute:'access project' },
+        } ,{ data: { id: '07',
+        heading:'Network',
+        user:'bob',
+        attribute:'access project' },
+        } 
+        ,{ data: { id: '08',
+        heading:'Network',
+        user:'bob',
+        attribute:'access project' },
+        } 
+        ,{ data: { id: '09',
+        heading:'Network',
+        user:'bob',
+        attribute:'access project' },
+        } 
+        ,
+        { data: { id: '10',
+        heading:'Network',
+        user:'bob',
+        attribute:'access project' },
+        },
+        { data: { id: '11',
+        heading:'Network 11',
+        user:'bob',
+        attribute:'access project' },
+        } ,
+        { data: { id: '12',
+        heading:'Network 12',
+        user:'bob',
+        attribute:'access project' },
+        },
+
       ],
 
       edges: [
@@ -92,7 +134,14 @@ var cy = cytoscape({
         { data: { id: 'bf', weight: 2, source: 'b', target: 'f' } },
         { data: { id: 'fg', weight: 2, source: 'f', target: 'g' } },
         { data: { id: 'fh', weight: 2, source: 'f', target: 'h' } },
-
+        { data: { id: 'q', weight: 2, source: 'f', target: 'j' } },
+        { data: { id: 'q06', weight: 2, source: 'f', target: '06' } },
+        { data: { id: 'e07', weight: 2, source: 'f', target: '07' } },
+        { data: { id: 'r08', weight: 2, source: 'f', target: '08' } },
+        { data: { id: 'f09', weight: 2, source: 'f', target: '09' } },
+        { data: { id: 'd10', weight: 2, source: 'f', target: '10' } },
+        { data: { id: 'd11', weight: 2, source: 'f', target: '11' } },
+        { data: { id: 'd12', weight: 2, source: 'f', target: '12' } },
       ]
     },
 
@@ -101,7 +150,36 @@ var cy = cytoscape({
     directed: true,
     roots: '#a',
     padding: 10
-  }
+  },
+   // initial viewport state:
+   zoom: 1,
+   pan: { x: 0, y: 0 },
+ 
+   // interaction options:
+   minZoom: 1e-50,
+   maxZoom: 1e50,
+   zoomingEnabled: true,
+   userZoomingEnabled: true,
+   panningEnabled: true,
+   userPanningEnabled: true,
+   boxSelectionEnabled: true,
+   selectionType: 'single',
+   touchTapThreshold: 8,
+   desktopTapThreshold: 4,
+   autolock: false,
+   autoungrabify: false,
+   autounselectify: false,
+   multiClickDebounceTime: 250,
+ 
+   // rendering options:
+   headless: false,
+   styleEnabled: true,
+   hideEdgesOnViewport: false,
+   textureOnViewport: false,
+   motionBlur: false,
+   motionBlurOpacity: 0.2,
+   wheelSensitivity: 1,
+   pixelRatio: 'auto'
 });
 
 var bfs = cy.elements().bfs('#a', function(){}, true);
